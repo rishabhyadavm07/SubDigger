@@ -20,4 +20,4 @@ There will be 10 phases which consists of working on diffrent tools and getting 
 13. subcat
 14. subdomain finder.c99.nl
 
-*Phase 1 will be having Dnsdumpster*
+*Phase 1 - Dnsdumpster*
