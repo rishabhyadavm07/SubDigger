@@ -1,9 +1,10 @@
 #Imported Libraries
-import imp
+# import imp
 from msilib.schema import Class
 from bs4 import BeautifulSoup
 import selenium
 import re
+import Subdigger
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -11,9 +12,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-class dnsdumpster:
-    def __init__(self, domainname ):
-        print("The domain you entered is [", domainname, "].")
+class Dnsdumpster(Subdigger):
 
     def initializeDriver(self, path):
         Path = path
@@ -69,7 +68,7 @@ PATH = "C:\Program Files (x86)\chromedriver.exe"
 
 
 DomainName = input("[-]Enter the Domain: ")
-ob = dnsdumpster(DomainName)
+ob = Dnsdumpster(DomainName)
 driver = ob.initializeDriver(PATH)
 ob.searchDomain(DomainName, driver)
 try:
